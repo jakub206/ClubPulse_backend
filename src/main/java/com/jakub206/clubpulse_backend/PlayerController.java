@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/players")
 public class PlayerController {
@@ -43,6 +44,7 @@ public class PlayerController {
         player.setBirthDate(playerDetails.getBirthDate());
         player.setEmail(playerDetails.getEmail());
         player.setPosition(playerDetails.getPosition());
+        player.setSex(playerDetails.getSex());
         return playerRepository.save(player);
     }
 

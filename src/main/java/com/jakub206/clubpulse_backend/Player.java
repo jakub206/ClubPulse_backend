@@ -12,12 +12,13 @@ public class Player {
     private Long id;
     private String name;
     private String surname;
+    private String sex;
     private String position;
     private String birthDate;
     private String phoneNumber;
     private String email;
 
-    public Player(Long id, String email, String birthDate, String surname, String name, String phoneNumber, String position) {
+    public Player(Long id, String email, String birthDate, String surname, String name, String phoneNumber, String position, String sex) {
         this.id = id;
         this.email = email;
         this.birthDate = birthDate;
@@ -25,6 +26,7 @@ public class Player {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.position = position;
+        this.sex = sex;
     }
 
     public Player() {
@@ -85,5 +87,13 @@ public class Player {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }
